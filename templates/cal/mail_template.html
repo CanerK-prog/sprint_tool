@@ -1,0 +1,28 @@
+{% extends 'cal/base.html' %}
+
+{% block title %}
+Calendar
+{% endblock %}
+
+{% block content %}
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Start Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for event in events %}
+            <tr>
+                <td>
+                    {{event.title}}
+                </td>
+                <td>
+                    {{event.start_time}}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
